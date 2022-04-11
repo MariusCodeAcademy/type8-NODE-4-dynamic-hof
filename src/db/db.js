@@ -23,7 +23,13 @@ const posts = [
   },
 ];
 
-function getPositiveNumbers() {}
+function getNumbers() {
+  return numbers;
+}
+
+function getPositiveNumbers() {
+  return numbers.filter((nr) => nr > 0);
+}
 
 function getNumbersGreaterThan(x) {}
 
