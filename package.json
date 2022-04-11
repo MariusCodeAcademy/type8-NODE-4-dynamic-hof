@@ -1,0 +1,25 @@
+{
+  "name": "node-4-dynamic-hof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusCodeAcademy/type8-NODE-4-dynamic-hof.git"
+  },
+  "keywords": [],
+  "author": "Marius K.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusCodeAcademy/type8-NODE-4-dynamic-hof/issues"
+  },
+  "homepage": "https://github.com/MariusCodeAcademy/type8-NODE-4-dynamic-hof#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
+  }
+}
