@@ -30,3 +30,8 @@ function getNumbersGreaterThan(x) {}
 function getPostById(id) {}
 
 function getPostByTitle(title) {}
+
+module.exports = {
+  numbers,
+  posts,
+};
