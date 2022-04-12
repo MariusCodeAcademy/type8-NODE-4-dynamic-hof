@@ -30,4 +30,6 @@ postRoutes.get('/:postId', (req, res) => {
   res.json(foundPost);
 });
 
+// GET /api/posts/dbname - gazina DB_NAME is .env
+
 module.exports = postRoutes;
