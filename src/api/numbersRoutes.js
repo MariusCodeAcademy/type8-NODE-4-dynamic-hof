@@ -5,7 +5,7 @@ const numbersRoutes = express.Router();
 
 // Routes
 numbersRoutes.get('/', (request, response) => {
-  console.log('numbers ===', numbers);
+  console.log('numbers ===', numbers1);
   response.json(numbers);
 });
 
@@ -17,11 +17,7 @@ numbersRoutes.get('/positives', (request, response) => {
 });
 
 numbersRoutes.get('/obj-values', (req, res) => {
-  const numbObjs = numbers.map((sk) => {
-    return {
-      value: sk,
-    };
-  });
+  const numbObjs = numbers.map((sk) => ({ value: sk }));
   console.log('numbObjs ===', numbObjs);
   res.json(numbObjs);
 });

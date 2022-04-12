@@ -1,7 +1,11 @@
 ### POSTS 
 GET http://localhost:3000/posts 
 ### numbers 
-GET http://localhost:3000/numbers 
+GET http://localhost:3000/api/numbers 
+### numbers 
+GET http://localhost:3000/api/numbers/gt/5
+### numbers 
+GET http://localhost:3000/api/numbers/obj-values 
 ### POSTS 
 POST http://localhost:3000/posts
 

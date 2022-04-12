@@ -20,6 +20,7 @@ app.use('/api/numbers', numbersRoutes);
 
 // GET /posts - grazina posts masyva json formatu is db.js
 const { posts } = require('./db/db');
+
 app.get('/posts', (request, response) => {
   //
   response.json(posts);
