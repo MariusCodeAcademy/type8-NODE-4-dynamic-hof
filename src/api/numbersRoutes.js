@@ -16,5 +16,26 @@ numbersRoutes.get('/positives', (request, response) => {
   // response.json(numbers.filter((sk) => sk > 0));
 });
 
+numbersRoutes.get('/obj-values', (req, res) => {
+  const numbObjs = numbers.map((sk) => {
+    return {
+      value: sk,
+    };
+  });
+  console.log('numbObjs ===', numbObjs);
+  res.json(numbObjs);
+});
+
+numbersRoutes.get('/max', (req, res) => {
+  const max = numbers.reduce((maxNum, sk) => Math.max(maxNum, sk));
+  res.json({ maxIs: max });
+});
+
+numbersRoutes.get('/gt/:num', (req, res) => {
+  const num = +req.params.num;
+  const skDaugiauUzNum = numbers.filter((sk) => sk > num);
+  res.json(skDaugiauUzNum);
+});
+
 // default export
 module.exports = numbersRoutes;

@@ -18,44 +18,6 @@ const numbersRoutes = require('./api/numbersRoutes');
 // use routes
 app.use('/api/numbers', numbersRoutes);
 
-// GET /numbers - grazina numbers masyva json formatu is db.js
-const { numbers } = require('./db/db');
-
-// GET /numbers/positives - grazina numbers masyva json formatu is db.js su tik teigiamais skaiciais
-
-// GET /numbers/obj-values - grazinam masyva kuris turi objektus {value: 1}, {value: 12}
-app.get('/numbers/obj-values', (req, res) => {
-  const numbObjs = numbers.map((sk) => {
-    return {
-      value: sk,
-    };
-  });
-  console.log('numbObjs ===', numbObjs);
-  res.json(numbObjs);
-});
-
-// GET /numbers/max - grazina didziausia reiksme objekto pavidalu {max: 500}
-app.get('/numbers/max', (req, res) => {
-  const max = numbers.reduce((maxNum, sk) => Math.max(maxNum, sk));
-  res.json({ maxIs: max });
-});
-
-// GET /numbers/separate - su reduce
-// {
-//   positives: [];
-//   negatives: [];
-// }
-
-// GET /numbers/gt/10 - grazina masyva kuriame yra sk didesni uz 10
-
-// GET /numbers/gt/:num - grazina masyva kuriame yra sk didesni uz num
-app.get('/numbers/gt/:num', (req, res) => {
-  // pasiimti num
-  const num = +req.params.num;
-  const skDaugiauUzNum = numbers.filter((sk) => sk > num);
-  res.json(skDaugiauUzNum);
-});
-
 // GET /posts - grazina posts masyva json formatu is db.js
 const { posts } = require('./db/db');
 app.get('/posts', (request, response) => {
