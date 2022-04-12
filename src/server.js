@@ -13,20 +13,15 @@ app.get('/', (request, response) => {
   response.send('<h1> Hello Express </h1>');
 });
 
+// import routes
+const numbersRoutes = require('./api/numbersRoutes');
+// use routes
+app.use('/api/numbers', numbersRoutes);
+
 // GET /numbers - grazina numbers masyva json formatu is db.js
 const { numbers } = require('./db/db');
-app.get('/numbers', (request, response) => {
-  console.log('numbers ===', numbers);
-  response.json(numbers);
-});
 
 // GET /numbers/positives - grazina numbers masyva json formatu is db.js su tik teigiamais skaiciais
-app.get('/numbers/positives', (request, response) => {
-  // numbers gauti tik teigiamus ir grazinti
-  const positives = numbers.filter((sk) => sk > 0);
-  response.json(positives);
-  // response.json(numbers.filter((sk) => sk > 0));
-});
 
 // GET /numbers/obj-values - grazinam masyva kuris turi objektus {value: 1}, {value: 12}
 app.get('/numbers/obj-values', (req, res) => {
@@ -46,10 +41,10 @@ app.get('/numbers/max', (req, res) => {
 });
 
 // GET /numbers/separate - su reduce
-{
-  positives: [];
-  negatives: [];
-}
+// {
+//   positives: [];
+//   negatives: [];
+// }
 
 // GET /numbers/gt/10 - grazina masyva kuriame yra sk didesni uz 10
 

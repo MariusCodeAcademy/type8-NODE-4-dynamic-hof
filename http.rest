@@ -1,5 +1,7 @@
 ### POSTS 
 GET http://localhost:3000/posts 
+### numbers 
+GET http://localhost:3000/numbers 
 ### POSTS 
 POST http://localhost:3000/posts
 
