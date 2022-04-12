@@ -5,7 +5,7 @@ const numbersRoutes = express.Router();
 
 // Routes
 numbersRoutes.get('/', (request, response) => {
-  console.log('numbers ===', numbers1);
+  console.log('numbers ===', numbers);
   response.json(numbers);
 });
 
