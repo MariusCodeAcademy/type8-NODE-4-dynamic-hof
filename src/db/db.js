@@ -23,19 +23,19 @@ const posts = [
   },
 ];
 
-function getNumbers() {
-  return numbers;
-}
+// function getNumbers() {
+//   return numbers;
+// }
 
-function getPositiveNumbers() {
-  return numbers.filter((nr) => nr > 0);
-}
+// function getPositiveNumbers() {
+//   return numbers.filter((nr) => nr > 0);
+// }
 
-function getNumbersGreaterThan(x) {}
+// function getNumbersGreaterThan(x) {}
 
-function getPostById(id) {}
+// function getPostById(id) {}
 
-function getPostByTitle(title) {}
+// function getPostByTitle(title) {}
 
 module.exports = {
   numbers,
